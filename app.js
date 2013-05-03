@@ -1,6 +1,6 @@
 var http = require('http');
 
-var server = htttp.createServer(function(request, response) {
+var server = http.createServer(function(request, response) {
     response.writeHead(200, {
         // headers here
         'Content-type' : 'text/plain'
