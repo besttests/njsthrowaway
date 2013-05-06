@@ -18,11 +18,11 @@ http.createServer(function(req, res) {
     var filename = path.join(process.cwd(), uri);
     console.log("Got Me Filename:");
     console.log(filename);
-    if(filename[(filename.length()-1)] == '\\'){
-        console.log("filename is dir");
-        filename = filename + 'index.html';
-        console.log("new filename:" + filename);
-    }
+    //if(filename[(filename.length()-1)] == '\\'){
+    //    console.log("filename is dir");
+    //    filename = filename + 'index.html';
+    //    console.log("new filename:" + filename);
+    //}
     fs.exists(filename, function(exists) {
         if(!exists) {
             console.log("not exists: " + filename);
@@ -38,4 +38,4 @@ http.createServer(function(req, res) {
         fileStream.pipe(res);
 
     }); //end path.exists
-}).listen(80);
+}).listen(1337);
